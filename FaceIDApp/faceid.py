@@ -117,7 +117,7 @@ def handle_webhook():
     return 'OK', 200
 
 def start_flask():
-    flask_app.run(port=5000)
+    flask_app.run(host='0.0.0.0', port=5000)
 
 if __name__ == '__main__':
     threading.Thread(target=start_flask, daemon=True).start()  # Start Flask in background
