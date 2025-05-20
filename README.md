@@ -13,6 +13,8 @@ I forked and improved this from the original by [@nicknochnack](https://github.c
 - Triggers **Home Assistant automations** via webhook when verified (or unverified)
 - Can also receive external commands to scan using a simple `curl` command
 
+![App UI (Unverified)](images/Unverified.png)
+
 ---
 
 ## 🧰 Prerequisites
@@ -33,12 +35,17 @@ I forked and improved this from the original by [@nicknochnack](https://github.c
 Download: https://www.anaconda.com/download/success  
 We use Anaconda to manage dependencies and avoid conflicts.
 
+### ✅ Recommended Settings During Anaconda Installation
+![Anaconda Setup](images/Anaconda.png)
+
 Once installed, open **Anaconda Prompt** and check:
+
+![Version Check](images/cmd_conda.png)
+
 ```bash
 conda --version
 python --version
 ```
-
 ---
 
 ### 🧲 2. Install Git & Clone the Project
@@ -84,6 +91,8 @@ jupyter kernelspec list
 cd ..\FaceRecognition
 jupyter lab
 ```
+
+![Jupyter](images/JupyterWeb.png)
 
 > Run the notebook `updated_facial_verification.ipynb`  
 > Press `Shift + Enter` to execute each cell.
@@ -165,6 +174,8 @@ In Home Assistant:
 - Choose “Webhook” as the trigger
 - Use `faceid_verified` or `faceid_unverified` as the webhook ID
 - Set actions like turning on lights or sending a notification
+
+![Home Assistant](images/automation.png)
 
 ---
 
