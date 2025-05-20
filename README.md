@@ -175,7 +175,7 @@ In Home Assistant:
 - Use `faceid_verified` or `faceid_unverified` as the webhook ID
 - Set actions like turning on lights or sending a notification
 
-![Home Assistant](images/automation.png)
+![Home Assistant](images/Automation.png)
 
 ---
 
