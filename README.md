@@ -181,9 +181,24 @@ In Home Assistant:
 
 ## 🌐 External Scan Command
 
-You can trigger the scan remotely using a simple `curl`:
+You can also trigger the scan **remotely** from another device on the same network using a simple `curl` command.
+
+Replace `192.168.216.11` with the **local IP address** of the machine running the app:
+
 ```bash
-curl -X POST http://localhost:5000/webhook -H "Content-Type: application/json" -d "{\"status\": \"scan\"}"
+curl -X POST http://192.168.216.11:5000/webhook -H "Content-Type: application/json" -d "{\"status\": \"scan\"}"
+```
+
+✅ Tip: To find your local IP address on Windows:
+
+Open Command Prompt and type:
+```bash
+ipconfig
+```
+
+Then look under your network adapter for:
+```bash
+IPv4 Address. . . . . . . . . . . : 192.168.xxx.xxx
 ```
 
 ---
