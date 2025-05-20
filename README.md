@@ -108,21 +108,43 @@ cv2.VideoCapture(0)  ➝  cv2.VideoCapture(1)
 In the notebook, continue running until the model is saved (`model.keras`).  
 This is the file you'll later move into the app.
 
----
-
 ## 📦 Setting Up the FaceID App
 
-### 🧩 8. Prepare Files
+### 🧩 8. Prepare Files and Folders
 
-- Put your trained `model.keras` inside `FaceIDApp/`
-- In `faceid.py`, modify the model loading line:
-```python
-self.model = tf.keras.models.load_model('model.keras', custom_objects={'L1Dist': L1Dist})
-```
+- Place your trained `model.keras` file inside the `FaceIDApp/` directory.
 
-- Inside `FaceIDApp/verification_images`, add ~30 images (copied from anchor/positive)
+- In `faceid.py`, modify the model loading line to use your custom layer:
+  ```python
+  self.model = tf.keras.models.load_model('model.keras', custom_objects={'L1Dist': L1Dist})
+  ```
 
----
+- Still in `faceid.py`, update the webcam capture line according to your camera setup:
+  ```python
+  cap = cv2.VideoCapture(0)  # Change the index (e.g., 0, 1, 2) depending on your device
+  ```
+
+- Inside `FaceIDApp/`, create the following folder structure:
+  ```
+  FaceIDApp/
+  ├── model.keras
+  ├── faceid.py
+  └── application_data/
+      ├── input_image/
+      └── verification_images/
+  ```
+
+- Add approximately 30 reference images (copied from your `anchor/` or `positive/` folders) into `application_data/verification_images/`.
+
+- The `input_image/` folder will store the captured image that will be compared with all images in `verification_images/`.
+
+### ✅ Verification Logic
+
+When a new image is captured:
+- It is saved into `input_image/`.
+- The Siamese model compares it with each image in `verification_images/`.
+- If the number of positive matches exceeds the number of non-matches, the user is considered **verified**.
+
 
 ## 🏠 Home Assistant Integration
 
