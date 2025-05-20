@@ -50,7 +50,8 @@ winget install --id Git.Git -e --source winget
 
 Clone this repository:
 ```bash
-cd C:git clone https://github.com/Mhikmat/FaceRecognition.git
+cd C:
+git clone https://github.com/Mhikmat/FaceRecognition.git
 ```
 
 ---
@@ -58,9 +59,10 @@ cd C:git clone https://github.com/Mhikmat/FaceRecognition.git
 ### 💻 3. Make and Activate a Virtual Environment
 
 ```bash
-cd C:python -m venv FaceRecognitionEnv
+cd C:
+python -m venv FaceRecognitionEnv
 cd FaceRecognitionEnv
-.\Scripts ctivate
+.\Scripts\Activate
 ```
 
 ---
