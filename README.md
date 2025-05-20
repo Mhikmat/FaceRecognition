@@ -124,7 +124,7 @@ This is the file you'll later move into the app.
   cap = cv2.VideoCapture(0)  # Change the index (e.g., 0, 1, 2) depending on your device
   ```
 
-- Inside `FaceIDApp/`, create the following folder structure:
+- Inside `FaceIDApp/`, make the following folder structure:
   ```
   FaceIDApp/
   ├── model.keras
