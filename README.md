@@ -21,7 +21,7 @@ I forked and improved this from the original by [@nicknochnack](https://github.c
 
 - **Anaconda** (for managing environments and launching Jupyter)
 - **Git** (to clone the project)
-- **Python 3.9+**
+- **Python** 3.7 or higher (tested with Python 3.9.13)
 - Optional: **CUDA & cuDNN** for GPU acceleration (much faster training!)
 
 ---
